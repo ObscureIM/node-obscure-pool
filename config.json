@@ -1,8 +1,8 @@
 {
-  "coin": "turtlecoin",
-  "symbol": "TRTL",
-  "coinUnits": 100,
-  "coinDifficultyTarget": 30,
+  "coin": "Obsidian",
+  "symbol": "XSD",
+  "coinUnits": 100000000,
+  "coinDifficultyTarget": 15,
   "logging": {
     "files": {
       "level": "info",
@@ -17,7 +17,7 @@
   "poolServer": {
     "enabled": true,
     "clusterForks": "auto",
-    "poolAddress": "TRTLv3mnq2wS6GepH6nb628jEjFseeojACYToJ1BXaZNNEvLkzW327zTVCh7ncGtS2MU2usGNq9ygVwiCTTft9QkN3t5P2Xqv3f",
+    "poolAddress": "XSDFkf8hTjtfucHyP318KpUy5UGpVYkVrGW1DuzetQDGPyJk7WhmxpW7jEwqjWuFwNjomT1xoUUdpeWpTf4MB8f87oZnHcmcfn",
     "blockRefreshInterval": 1000,
     "minerTimeout": 3600,
     "ports": [
@@ -89,11 +89,11 @@
     "allowPaymentId": true,
     "interval": 120,
     "maxAddresses": 50,
-    "transferFee": 100,
-    "minPayment": 100000,
+    "transferFee": 100000000,
+    "minPayment": 100000000,
     "minPaymentIdPayment": 10000000,
     "maxTransactionAmount": 0,
-    "denomination": 100
+    "denomination": 100000000,
   },
   "blockUnlocker": {
     "enabled": true,
@@ -182,4 +182,6 @@
       }
     }
   }
+
 }
+
