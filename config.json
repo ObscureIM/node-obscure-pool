@@ -90,7 +90,7 @@
     "interval": 120,
     "maxAddresses": 50,
     "transferFee": 100000000,
-    "minPayment": 100000000,
+    "minPayment": 200000000,
     "minPaymentIdPayment": 10000000,
     "maxTransactionAmount": 0,
     "denomination": 100000000
