@@ -20,7 +20,7 @@ var allowCrossDomain = function(req, res, next) {
 app.use(allowCrossDomain)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));
-app.use(express.static("public"))
+app.use(express.static("website"))
 //Initialize the app
 var server = app.listen(process.env.PORT || 8080, function () {
     var port = server.address().port;
