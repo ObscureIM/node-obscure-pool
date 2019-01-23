@@ -1,8 +1,8 @@
-var api = 'http://poolhost.com:8117'
+var api = 'http://178.128.223.203:8117'
 
 var api_blockexplorer = 'http://daemonhost.com:11898'
 
-var poolHost = 'poolhost.com'
+var poolHost = '178.128.223.203'
 
 var irc = 'irc.freenode.net/#poolhost'
 
