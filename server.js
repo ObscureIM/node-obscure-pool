@@ -30,19 +30,24 @@ var server = app.listen(process.env.PORT || 8080, function () {
     console.log("App now running on port", port);
   })
 
-var url = '178.128.223.203:8117'
+var url = '0.0.0.0:8117'
 app.get('/stats',function(req,res) {
-  var request = new XMLHttpRequest();
-  url2 = url + '/stats'
-  console.log(url2)
-  request.open('GET', url2 , true);
-  request.onload = function() {
-    if (request.status >= 200 && request.status < 400) {
-      // Success!
-      var data = JSON.parse(request.responseText);
-    } else {
-      // We reached our target server, but it returned an error
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-    }
-  };
+var url = 'http://pool.obscure.im:8117'
+var request = new XMLHttpRequest()
+url2 = url + '/stats'
+console.log(url2)
+request.open('GET', url2 , true);
+request.onload = function() {
+  if (request.status >= 200 && request.status < 400) {
+    // Success!
+    var data = JSON.parse(request.responseText);
+    res.send(data)
+  } else {
+    // We reached our target server, but it returned an error
+    console.log("fail")
+  }
+};
+request.send()
 })
