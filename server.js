@@ -30,10 +30,12 @@ var server = app.listen(process.env.PORT || 8080, function () {
     console.log("App now running on port", port);
   })
 
-var url = '0.0.0.0:8117'
+var url = '178.128.223.203:8117'
 app.get('/stats',function(req,res) {
   var request = new XMLHttpRequest();
-  request.open('GET', url + '/stats', true);
+  url2 = url + '/stats'
+  console.log(url2)
+  request.open('GET', url2 , true);
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
       // Success!
