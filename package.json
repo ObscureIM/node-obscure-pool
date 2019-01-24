@@ -19,14 +19,15 @@
         "bignum": "*",
         "cli-color": "^1.4.0",
         "dateformat": "*",
+        "express": "^4.1.0",
+        "forever": "^0.15.0",
         "redis": "*",
+        "request": "^2.88.0",
         "safe-buffer": "^5.1.2",
         "turtlecoin-cryptonote-util": "0.0.6",
         "turtlecoin-multi-hashing": "0.0.18",
         "turtlecoin-utils": "0.0.2",
-        "express":"^4.1.0",
-        "request":"^2.88.0",
-        "forever":"^0.15.0"
+        "xmlhttprequest": "^1.8.0"
     },
     "engines": {
         "node": ">=6"
