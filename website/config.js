@@ -1,8 +1,8 @@
-var api = 'http://178.128.223.203:8117'
+var api = 'https://pool.obscure.im:8117'
 
-var api_blockexplorer = 'http://178.128.223.203:11898'
+var api_blockexplorer = 'https://pool.obscure.im:11898'
 
-var poolHost = '178.128.223.203'
+var poolHost = 'pool.obscure.im'
 
 var irc = 'irc.freenode.net/#poolhost'
 
