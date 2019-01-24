@@ -1,6 +1,6 @@
-var api = 'https://pool.obscure.im:8117'
+var api = 'https://pool.obscure.im'
 
-var api_blockexplorer = 'https://pool.obscure.im:11898'
+var api_blockexplorer = 'https://pool.obscure.im'
 
 var poolHost = 'pool.obscure.im'
 
