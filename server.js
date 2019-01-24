@@ -24,21 +24,23 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static("website"))
 //Initialize the app
 
-var url = '0.0.0.0:8117'
+
 var server = app.listen(process.env.PORT || 8080, function () {
     var port = server.address().port;
     console.log("App now running on port", port);
   })
 
+var url = '0.0.0.0:8117'
 app.get('/stats',function(req,res) {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-         // Typical action to be performed when the document is ready:
-         res.send(xhttp.responseText)
-      }
+  var request = new XMLHttpRequest();
+  request.open('GET', url + '/stats', true);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      // Success!
+      var data = JSON.parse(request.responseText);
+    } else {
+      // We reached our target server, but it returned an error
+
+    }
   };
-  url = url + '/stats'
-  xhttp.open("GET", url, true);
-  xhttp.send();
 })
