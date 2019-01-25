@@ -265,7 +265,7 @@
 
     function fetchLiveStats() {
         $.ajax({
-            url: api + '/live_stats',
+            url: api + '/stats',
             dataType: 'json',
             cache: 'false'
         }).done(function(data){
@@ -376,7 +376,7 @@
                     <i class="fa fa-cubes"></i> Blockchain
                 </a></li>
 
-                
+
 <!-- //-->
                 <li><a class="hot_link" data-page="network.html" href="#network">
                     <i class="fa fa-chain"></i> Network
