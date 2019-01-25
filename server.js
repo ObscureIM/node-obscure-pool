@@ -73,8 +73,7 @@ app.get('/get_payments',function(req,res) {
   var time = req.query.time
   var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
   var request = new XMLHttpRequest()
-  console.log(time)
-  url2 = url + '/stats_address?time=' + time
+  url2 = url + '/get_payments?time=' + time
   request.open('GET', url2 , true);
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
