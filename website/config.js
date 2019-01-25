@@ -1,6 +1,6 @@
 var api = 'https://pool.obscure.im'
 
-var api_blockexplorer = 'https://pool.obscure.im'
+var api_blockexplorer = 'https://explore.obscure.im'
 
 var poolHost = 'pool.obscure.im'
 
@@ -12,9 +12,9 @@ var cryptonatorWidget = ['{symbol}-BTC', '{symbol}-USD', '{symbol}-EUR']
 
 var easyminerDownload = 'https://github.com/zone117x/cryptonote-easy-miner/releases/'
 
-var blockchainExplorer = 'http://chainradar.com/{symbol}/block/{id}'
+var blockchainExplorer = 'https://explore.obscure.im/block.html?hash={id}'
 
-var transactionExplorer = 'http://chainradar.com/{symbol}/transaction/{id}'
+var transactionExplorer = 'https://explore.obscure.im/transaction.html?hash={id}'
 
 var themeCss = 'themes/default-theme.css'
 

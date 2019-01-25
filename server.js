@@ -87,3 +87,22 @@ app.get('/get_payments',function(req,res) {
   };
   request.send()
 })
+
+app.get('/get_miner_payout_level',function(req,res) {
+  var address = req.query.addressError
+  var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+  var request = new XMLHttpRequest()
+  url2 = url + '/get_miner_payout_level?address=' + address
+  request.open('GET', url2 , true);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      // Success!
+      var data = JSON.parse(request.responseText);
+      res.send(data)
+    } else {
+      // We reached our target server, but it returned an error
+      console.log("fail")
+    }
+  };
+  request.send()
+})
