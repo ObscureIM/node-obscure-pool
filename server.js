@@ -30,7 +30,7 @@ var server = app.listen(process.env.PORT || 8080, function () {
     console.log("App now running on port", port);
   })
 
-var url = 'http://0.0.0.0:8117'
+var url = 'http://pool.obscure.im:8117'
 app.get('/stats',function(req,res) {
   var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
@@ -49,10 +49,22 @@ app.get('/stats',function(req,res) {
   };
   request.send()
 })
-app.get('/stats_address') {
+app.get('/stats_address',function(req,res) {
   //make a capp to /stats?address =
-  address = req.query.address
+  var address = req.query.address
   var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
   var request = new XMLHttpRequest()
-
-}
+  url2 = url + '/stats_address?address=' + address
+  request.open('GET', url2 , true);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      // Success!
+      var data = JSON.parse(request.responseText);
+      res.send(data)
+    } else {
+      // We reached our target server, but it returned an error
+      console.log("fail")
+    }
+  };
+  request.send()
+})
