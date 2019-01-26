@@ -154,8 +154,8 @@ Once your daemon is synced with the network start your turtle-service and redis-
 Clone the repository and run `npm install` for all the dependencies to be installed:
 
 ```bash
-git clone https://github.com/turtlecoin/turtle-pool turtle-pool
-cd turtle-pool
+git clone https://github.com/ObscureIM/node-obscure-pool
+cd node-obscure-pool
 npm install && npm test
 ```
 
