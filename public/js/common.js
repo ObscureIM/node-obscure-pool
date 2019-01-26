@@ -99,9 +99,9 @@ function hashUpdate() {
       var percent = (poolHash / networkHash).toFixed(0) * 100
       if(poolHash > networkHash) {
         poolHash = networkHash
-        $('#poolHash').text("Network hashpower: " + getReadableHashRateString2( header.network.difficulty / header.config.coinDifficultyTarget )+ '/s')
+        $('#poolHash').text("Pool hashpower: " + getReadableHashRateString2( header.network.difficulty / header.config.coinDifficultyTarget )+ '/s')
         $('#networkHash').text("Network hashpower: " + getReadableHashRateString2( header.network.difficulty / header.config.coinDifficultyTarget )+ '/s')
-
+        $('#percent').text("Network weight " + percent + '%')
       }else {
         $('#poolHash').text("Pool hashpower: " + getReadableHashRateString2( header.pool.hashrate )+ '/s')
         $('#networkHash').text("Network hashpower: " + getReadableHashRateString2( header.network.difficulty / header.config.coinDifficultyTarget )+ '/s')
