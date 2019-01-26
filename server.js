@@ -21,7 +21,7 @@ var allowCrossDomain = function(req, res, next) {
 app.use(allowCrossDomain)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));
-app.use(express.static("website"))
+app.use(express.static("public"))
 //Initialize the app
 
 
