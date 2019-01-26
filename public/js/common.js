@@ -96,16 +96,17 @@ function hashUpdate() {
     success: function(header) {
       var networkHash = getReadableHashRateString(header.network.difficulty / header.config.coinDifficultyTarget);
       var poolHash =  getReadableHashRateString(header.pool.hashrate);
-      var percent = (poolHash / networkHash).toFixed(0) * 100
+      var percent = (poolHash / networkHash).toFixed(2) * 100
+
       if(poolHash > networkHash) {
         poolHash = networkHash
         $('#poolHash').text("Pool hashpower: " + getReadableHashRateString2( header.network.difficulty / header.config.coinDifficultyTarget )+ '/s')
         $('#networkHash').text("Network hashpower: " + getReadableHashRateString2( header.network.difficulty / header.config.coinDifficultyTarget )+ '/s')
-        $('#percent').text("100%")
+        $('#percent').text("Netowrk Weight: 100%")
       }else {
         $('#poolHash').text("Pool hashpower: " + getReadableHashRateString2( header.pool.hashrate )+ '/s')
         $('#networkHash').text("Network hashpower: " + getReadableHashRateString2( header.network.difficulty / header.config.coinDifficultyTarget )+ '/s')
-        $('#percent').text("Network weight " + percent + '%')
+        $('#percent').text("Network weight: " + percent + '%')
       }
       setTimeout(hashUpdate,3000)
     },
