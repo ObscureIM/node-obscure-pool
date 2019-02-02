@@ -17,7 +17,7 @@
   "poolServer": {
     "enabled": true,
     "clusterForks": "auto",
-    "poolAddress": "XSC1NhNQSfSaLRUk1RMgcTD9h97PS7RmTYDadsYdngh1KYHkhKirJEsK2WBLXxR2iGY6ZE534kXrc7mM6bdWXXvvA4vKisbHWQ",
+    "poolAddress":"XSC1D4QN84DXhNBuEdyjc6FmnCtPKtXm589X1cDE46EBa5y4ohi5SHaKjgSX8uoetU8pc2ahkFyzp4xKdMeZjYXm9772yNUgGe",
     "blockRefreshInterval": 1000,
     "minerTimeout": 3600,
     "ports": [
@@ -93,7 +93,7 @@
     "minPayment": 200000000,
     "minPaymentIdPayment": 2000000,
     "maxTransactionAmount": 3000000000,
-    "denomination": 10000000
+    "denomination": 100000000
   },
   "blockUnlocker": {
     "enabled": true,
@@ -121,7 +121,7 @@
   "wallet": {
     "host": "178.128.223.203",
     "port": 8070,
-    "password": "092384"
+    "password": "123"
   },
   "redis": {
     "host": "127.0.0.1",
